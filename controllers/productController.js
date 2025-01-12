@@ -1,4 +1,60 @@
 import Product from '../models/productModel.js';
+import multer from 'multer';
+import path from 'path';
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/'); // Save files in the 'uploads' folder
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname)); // Unique filename
+  }
+});
+
+const upload = multer({ storage: storage });
+
+// Update addProduct to handle image uploads
+const addProduct = async (req, res) => {
+  const { title, price, description } = req.body;
+  const images = req.files; // Retrieve uploaded files
+
+  if (!title || !price || !description || !images) {
+    return res.status(400).json({ message: "All fields are required" });
+  }
+
+  const imageUrls = images.map(file => `/uploads/${file.filename}`); // Store relative image paths
+
+  try {
+    const product = new Product({
+      title,
+      price,
+      description,
+      images: imageUrls
+    });
+    await product.save();
+    res.status(201).json({ message: "Product added successfully", product });
+  } catch (err) {
+    console.error(err);
+    res.status(400).json({ message: "Failed to add product", error: err.message });
+  }
+};
+
+// const addProduct = async (req, res) => {
+//   const { title, price, description, images } = req.body;
+
+//   if (!title || !price || !description || !images) {
+//     return res.status(400).json({ message: "All fields are required" });
+//   }
+
+//   try {
+//     const product = new Product({ title, price, description, images });
+//     await product.save();
+//     res.status(201).json({ message: "Product added successfully", product });
+//   } catch (err) {
+//     console.error(err);
+//     res.status(400).json({ message: "Failed to add product", error: err.message });
+//   }
+// };
 
 const getProducts = async (req, res) => {
   try {
@@ -10,23 +66,6 @@ const getProducts = async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Failed to fetch products", error: err.message });
-  }
-};
-
-const addProduct = async (req, res) => {
-  const { title, price, description, images } = req.body;
-
-  if (!title || !price || !description || !images) {
-    return res.status(400).json({ message: "All fields are required" });
-  }
-
-  try {
-    const product = new Product({ title, price, description, images });
-    await product.save();
-    res.status(201).json({ message: "Product added successfully", product });
-  } catch (err) {
-    console.error(err);
-    res.status(400).json({ message: "Failed to add product", error: err.message });
   }
 };
 
@@ -78,4 +117,4 @@ const deleteProduct = async (req, res) => {
   }
 };
 
-export { getProducts, addProduct, editProduct, deleteProduct };
+export { upload,getProducts, addProduct, editProduct, deleteProduct };
