@@ -1,120 +1,58 @@
-import Product from '../models/productModel.js';
-import multer from 'multer';
-import path from 'path';
+import Product from "../models/Product.js";
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads/'); // Save files in the 'uploads' folder
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + path.extname(file.originalname)); // Unique filename
-  }
-});
-
-const upload = multer({ storage: storage });
-
-// Update addProduct to handle image uploads
-const addProduct = async (req, res) => {
-  const { title, price, description } = req.body;
-  const images = req.files; // Retrieve uploaded files
-
-  if (!title || !price || !description || !images) {
-    return res.status(400).json({ message: "All fields are required" });
-  }
-
-  const imageUrls = images.map(file => `/uploads/${file.filename}`); // Store relative image paths
-
-  try {
-    const product = new Product({
-      title,
-      price,
-      description,
-      images: imageUrls
-    });
-    await product.save();
-    res.status(201).json({ message: "Product added successfully", product });
-  } catch (err) {
-    console.error(err);
-    res.status(400).json({ message: "Failed to add product", error: err.message });
-  }
-};
-
-// const addProduct = async (req, res) => {
-//   const { title, price, description, images } = req.body;
-
-//   if (!title || !price || !description || !images) {
-//     return res.status(400).json({ message: "All fields are required" });
-//   }
-
-//   try {
-//     const product = new Product({ title, price, description, images });
-//     await product.save();
-//     res.status(201).json({ message: "Product added successfully", product });
-//   } catch (err) {
-//     console.error(err);
-//     res.status(400).json({ message: "Failed to add product", error: err.message });
-//   }
-// };
-
-const getProducts = async (req, res) => {
+export const getAllProducts = async (req, res) => {
   try {
     const products = await Product.find();
-    if (products.length === 0) {
-      return res.status(200).json({ message: "No products available" });
-    }
     res.status(200).json(products);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: "Failed to fetch products", error: err.message });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
   }
 };
 
-const editProduct = async (req, res) => {
-  const { id } = req.params;
-  const { title, price, description, images } = req.body;
+export const addProduct = async (req, res) => {
+  console.log("Received files:", req.files); // Debugging step
+  console.log("Received body:", req.body); // Debugging step
 
-  if (!id) {
-    return res.status(400).json({ message: "Product ID is required" });
-  }
+  const { title, price, description } = req.body;
+
+  // Normalize paths to use forward slashes
+  const images = req.files.map(
+    (file) =>
+      `${req.protocol}://${req.get("host")}/${file.path.replace(/\\/g, "/")}`
+  );
+
+  console.log("Full Image URLs:", images); // Debugging step
 
   try {
-    const product = await Product.findById(id);
-    if (!product) {
-      return res.status(404).json({ message: "Product not found" });
-    }
+    const newProduct = new Product({ title, price, description, images });
+    await newProduct.save();
 
-    product.title = title || product.title;
-    product.price = price || product.price;
-    product.description = description || product.description;
-    product.images = images || product.images;
+    const products = await Product.find(); // Fetch products from DB
+    const productsWithImages = products.map((product) => ({
+      ...product.toObject(),
+      images: product.images.map(
+        (path) => path.replace(/\\/g, "/") // Ensure paths are normalized
+      ),
+    }));
 
-    await product.save();
-    res.status(200).json({ message: "Product updated successfully", product });
-  } catch (err) {
-    console.error(err);
-    res.status(400).json({ message: "Failed to update product", error: err.message });
+    res.status(201).json({
+      message: "Product added successfully",
+      product: newProduct,
+      allProducts: productsWithImages,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: error.message });
   }
 };
 
-const deleteProduct = async (req, res) => {
+export const deleteProduct = async (req, res) => {
   const { id } = req.params;
 
-  if (!id) {
-    return res.status(400).json({ message: "Product ID is required" });
-  }
-
   try {
-    const product = await Product.findByIdAndDelete(id);
-
-    if (!product) {
-      return res.status(404).json({ message: "Product not found" });
-    }
-
+    await Product.findByIdAndDelete(id);
     res.status(200).json({ message: "Product deleted successfully" });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: "Failed to delete product", error: err.message });
+  } catch (error) {
+    res.status(400).json({ message: error.message });
   }
 };
-
-export { upload,getProducts, addProduct, editProduct, deleteProduct };

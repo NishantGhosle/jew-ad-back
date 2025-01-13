@@ -1,9 +1,8 @@
 [
     {
-        "id": 1,
         "title": "Jhumka",
         "price": 15000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/traditional/jhumka1.jpg",
             "https://jewellery-images.netlify.app/traditional/jhumka2.jpg",
             "https://jewellery-images.netlify.app/traditional/jhumka3.jpg"
@@ -11,10 +10,9 @@
         "description": "Exquisite Traditional Gold-Plated Jhumka Earrings Elevate your style with these beautifully handcrafted jhumkas, inspired by traditional temple jewelry. Made from premium-quality brass and plated with 22K gold, these earrings feature intricate detailing with meenakari work and delicate pearl embellishments that add a touch of elegance.The lightweight design ensures all-day comfort, making them perfect for weddings, festivals, or special occasions. Their versatile appeal allows them to complement both traditional sarees and modern outfits.These jhumkas are a timeless accessory that blend tradition with contemporary elegance, making them a thoughtful gift for your loved ones. For longevity, store them in a dry place and avoid direct contact with water or perfumes."
     },
     {
-        "id": 2,
         "title": "Anklet",
         "price": 5000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/silver/anklets1.jpg",
             "https://jewellery-images.netlify.app/silver/anklets2.jpg",
             "https://jewellery-images.netlify.app/silver/anklets3.jpg"
@@ -22,10 +20,9 @@
         "description": "Elegant Silver-Plated Anklet with Delicate Bells. Add a touch of grace to your stride with this stunning silver-plated anklet. Crafted with intricate detailing, it features tiny, sound-producing bells that create a soothing chime with every step. The anklet is adorned with subtle floral engravings, blending tradition with modern aesthetics. Made from high-quality silver-plated metal, it offers a lightweight design and adjustable chain to ensure a perfect fit for all. Whether you’re attending a wedding, a festive celebration, or simply accessorizing a casual outfit, this anklet is a versatile addition to your jewelry collection.A timeless piece, it makes for an excellent gift for birthdays, anniversaries, or special occasions. To preserve its shine and charm, store it in a dry place and avoid contact with water or harsh chemicals."
     },
     {
-        "id": 3,
         "title": "Silver Bracelet",
         "price": 75000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/silver/silverbracelet1.jpg",
             "https://jewellery-images.netlify.app/silver/silverbracelet2.jpg",
             "https://jewellery-images.netlify.app/silver/silverbracelet3.jpg"
@@ -33,10 +30,9 @@
         "description": "Elevate your style with this exquisite silver bracelet, a perfect blend of elegance and sophistication. Crafted from premium quality silver, this bracelet features a sleek and minimalistic design adorned with delicate engravings and shimmering accents. Its adjustable clasp ensures a comfortable and secure fit, making it ideal for both everyday wear and special occasions. A timeless accessory that complements any outfit, this silver bracelet is a must-have addition to your jewelry collection. Perfect for gifting, it symbolizes grace and charm, leaving a lasting impression on every occasion."
     },
     {
-        "id": 4,
         "title": "Silver Chain",
         "price": 25000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/silver/silverchain1.jpg",
             "https://jewellery-images.netlify.app/silver/silverchain2.jpg",
             "https://jewellery-images.netlify.app/silver/silverchain3.jpg"
@@ -44,10 +40,9 @@
         "description": "Discover the timeless allure of our silver chains, a perfect accessory for every occasion. Crafted from premium-quality silver, these chains feature sleek and versatile designs, making them suitable for both men and women. Wear them solo for a minimalist look or pair them with your favorite pendants for added charm. Available in various lengths and styles, our silver chains cater to diverse preferences, offering durability and a lasting shine. Ideal for daily wear or special events, they are a subtle yet elegant addition to your jewelry collection, ensuring you carry a touch of sophistication wherever you go."
     },
     {
-        "id": 5,
         "title": "Silver Earrings",
         "price": 45000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/silver/silverearring1.jpg",
             "https://jewellery-images.netlify.app/silver/silverearring2.jpg",
             "https://jewellery-images.netlify.app/silver/silverearring3.jpg"
@@ -55,10 +50,9 @@
         "description": "Elevate your style with our exquisite silver earrings, crafted with precision and elegance. From delicate studs for a subtle touch to striking danglers that make a statement, our earrings suit every occasion and mood. Made with high-quality silver, they are lightweight, durable, and comfortable for extended wear. Whether paired with casual outfits or formal attire, they add a touch of sophistication and grace. Perfect as gifts or personal indulgences, these earrings are versatile accessories that complement any ensemble, making them an essential addition to your jewelry collection for a timeless look."
     },
     {
-        "id": 6,
         "title": "Silver Ring",
         "price": 8000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/silver/silverring1.jpg",
             "https://jewellery-images.netlify.app/silver/silverring2.jpg",
             "https://jewellery-images.netlify.app/silver/silverring3.jpg"
@@ -66,10 +60,9 @@
         "description": "Experience the charm of simplicity with our beautifully crafted silver rings, designed to complement every style. Whether minimalist bands or intricate patterns, our rings are made from high-quality silver, ensuring durability and lasting shine. Lightweight and comfortable, they are ideal for daily wear or special occasions. A versatile accessory, these rings add elegance to casual outfits and complete formal looks effortlessly. Perfect for personal indulgence or thoughtful gifts, they symbolize timeless grace and style. Explore our collection to find the perfect silver ring that resonates with your unique taste and enhances your jewelry wardrobe."
     },
     {
-        "id": 7,
         "title": "Toe Ring",
         "price": 20000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/silver/toering1.jpg",
             "https://jewellery-images.netlify.app/silver/toering2.jpg",
             "https://jewellery-images.netlify.app/silver/toering3.jpg"
@@ -77,10 +70,9 @@
         "description": "Embrace tradition with our elegant toe rings, a must-have accessory for modern women. Crafted with high-quality materials, they are designed to offer both style and comfort. Choose from intricate patterns, sleek finishes, or adorned designs to suit your personal taste. Perfect for daily wear or special occasions, our toe rings symbolize beauty and femininity. Lightweight and durable, they are ideal for adding a traditional touch to your ensemble while ensuring ease of wear. Whether you prefer classic or contemporary styles, our toe rings are a timeless addition to your jewelry collection."
     },
     {
-        "id": 8,
         "title": "Gold Bangles",
         "price": 35000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/gold/bangle1.jpg",
             "https://jewellery-images.netlify.app/gold/bangle3.jpg",
             "https://jewellery-images.netlify.app/gold/bangle3.jpg"
@@ -88,10 +80,9 @@
         "description": "Celebrate tradition with our exquisite bangles, blending cultural heritage with contemporary flair. Designed for women of all ages, these bangles are crafted from high-quality materials, ensuring durability and lasting shine. Choose from delicate, engraved designs or bold, statement pieces to suit your personal style. Perfect for weddings, festivals, or everyday wear, our bangles add elegance and grace to any outfit. Their intricate detailing reflects exceptional craftsmanship, making them a treasured addition to your jewelry collection. Whether worn individually or stacked, these versatile accessories enhance your beauty and symbolize timeless tradition with a modern twist."
     },
     {
-        "id": 9,
         "title": "Gold Bracelets",
         "price": 40000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/gold/bracelet1.jpg",
             "https://jewellery-images.netlify.app/gold/bracelet2.jpg",
             "https://jewellery-images.netlify.app/gold/bracelet3.jpg"
@@ -99,10 +90,9 @@
         "description": "Adorn your wrist with our stunning bracelets, where modern elegance meets timeless charm. Each bracelet is meticulously crafted with premium materials, featuring designs that range from minimalist to intricate. Whether embellished with sparkling stones or sleek metallic finishes, these pieces effortlessly elevate any outfit, from casual to formal. Lightweight and comfortable, our bracelets are ideal for daily wear or as statement accessories for special occasions. Perfect as a thoughtful gift or personal treasure, they embody sophistication and grace. Explore our collection to find a bracelet that resonates with your style and adds a dazzling touch to your ensemble."
     },
     {
-        "id": 10,
         "title": "Gold Chain",
         "price": 30000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/gold/chaiin1.jpg",
             "https://jewellery-images.netlify.app/gold/chaiin2.jpg",
             "https://jewellery-images.netlify.app/gold/chaiin3.jpg"
@@ -110,10 +100,9 @@
         "description": "Our classic chains blend simplicity and elegance to create the perfect accessory for any occasion. Designed with versatility in mind, they can be worn solo for a sleek look or paired with pendants for added charm. Crafted from premium materials like gold, silver, or platinum, each chain boasts exceptional durability and shine. Available in a range of lengths and designs, from delicate to bold, these chains suit both men and women. Whether for daily wear or special occasions, our chains are a timeless addition to your jewelry collection, ensuring you carry a touch of sophistication wherever you go."
     },
     {
-        "id": 11,
         "title": "Gold Earing",
         "price": 55000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/gold/earring1.jpg",
             "https://jewellery-images.netlify.app/gold/earring2.jpg",
             "https://jewellery-images.netlify.app/gold/earring3.jpg"
@@ -121,10 +110,9 @@
         "description": "Complete your look with our exquisite collection of earrings, designed to suit every mood and occasion. From delicate studs for understated elegance to bold danglers that make a statement, our earrings are crafted with precision and care. Made from high-quality materials and adorned with sparkling stones or intricate patterns, they exude charm and sophistication. Lightweight and comfortable, they are perfect for daily wear or special events. A versatile accessory that enhances any outfit, our earrings are an essential addition to your jewelry collection, ensuring you shine with elegance and style wherever you go."
     },
     {
-        "id": 12,
         "title": "Mangalsutras",
         "price": 20000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/gold/mangalsutra1.jpg",
             "https://jewellery-images.netlify.app/gold/mangalsutra2.jpg",
             "https://jewellery-images.netlify.app/gold/mangalsutra3.jpg"
@@ -132,10 +120,9 @@
         "description": "Celebrate the sacred bond of marriage with our beautifully designed mangalsutras, combining tradition and contemporary style. Crafted with precision, they feature high-quality materials, intricate patterns, and elegant finishes. Whether adorned with gemstones or showcasing sleek modern designs, our mangalsutras symbolize love and commitment while complementing both traditional and western outfits. Comfortable for daily wear and striking enough for special occasions, they are the perfect blend of cultural significance and timeless elegance. Explore our collection to find a piece that resonates with your personal style, ensuring you carry the essence of tradition in the most fashionable way."
     },
     {
-        "id": 13,
         "title": "Necklace",
         "price": 30000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/gold/necklace1.jpg",
             "https://jewellery-images.netlify.app/gold/necklace2.jpg",
             "https://jewellery-images.netlify.app/gold/necklace3.jpg"
@@ -143,10 +130,9 @@
         "description": "Discover timeless elegance with our exquisite collection of necklaces, designed to complement every style and occasion. Each piece is a masterpiece, meticulously crafted with high-quality materials and intricate detailing. From traditional gold necklaces to modern minimalist designs, our collection caters to every preference. These versatile accessories add a touch of sophistication to casual outfits and elevate the charm of festive or formal ensembles. Whether adorned with sparkling gemstones or showcasing sleek metallic finishes, our necklaces are perfect for gifting or personal indulgence. Explore a world of beauty and grace with a piece that speaks to your unique sense of style."
     },
     {
-        "id": 14,
         "title": "Nose Pin",
         "price": 85000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/gold/nosepin1.jpg",
             "https://jewellery-images.netlify.app/gold/nosepin2.jpg",
             "https://jewellery-images.netlify.app/gold/nosepin3.jpg"
@@ -154,10 +140,9 @@
         "description": "Make a bold statement with our finely crafted nose pins, blending elegance with a touch of tradition. Designed with intricate detailing and premium materials, they are perfect for enhancing your natural beauty. From minimalistic studs to elaborate designs adorned with stones, our collection offers something for every preference. Lightweight and comfortable, these nose pins are suitable for everyday wear or festive occasions, adding a subtle sparkle to your face. Whether you want to embrace cultural heritage or showcase a modern twist, our nose pins are the ideal accessory to express your unique style and grace."
     },
     {
-        "id": 15,
         "title": "Pendant",
         "price": 60000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/gold/pendant1.jpg",
             "https://jewellery-images.netlify.app/gold/pendant2.jpg",
             "https://jewellery-images.netlify.app/gold/pendant3.jpg"
@@ -165,10 +150,9 @@
         "description": "Our pendants are a celebration of individuality and style, crafted to add a touch of elegance to your look. Available in a variety of designs, from classic motifs to contemporary patterns, they cater to every preference. Each pendant is meticulously crafted using premium materials and intricate detailing, making it perfect for pairing with your favorite chains. Ideal for casual wear or special occasions, they make thoughtful gifts or personal treasures. Whether adorned with gemstones or minimalist finishes, our pendants exude sophistication and charm, elevating your jewelry collection and ensuring you carry a symbol of grace and beauty."
     },
     {
-        "id": 16,
         "title": "Ring",
         "price": 18000,
-        "image": [
+        "images": [
             "https://jewellery-images.netlify.app/gold/ring1.jpg",
             "https://jewellery-images.netlify.app/gold/ring2.jpg",
             "https://jewellery-images.netlify.app/gold/ring3.jpg"
