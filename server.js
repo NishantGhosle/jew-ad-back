@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import productRoutes from './routes/productRoutes.js';
+import contactRoutes from './routes/contactRoutes.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -22,6 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use('/api/products', productRoutes);
+app.use('/', contactRoutes);
 
 // Admin Login Endpoint
 app.post('/api/admin/login', (req, res) => {
@@ -37,6 +39,7 @@ app.post('/api/admin/login', (req, res) => {
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    connectTimeoutMS: 100000, 
 }).then(() => console.log('MongoDB Connected')).catch((err) => console.log(err));
 
 const PORT = process.env.PORT || 5000;
