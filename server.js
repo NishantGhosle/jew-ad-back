@@ -13,21 +13,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config();
 
-// Middleware
 app.use(cors({
-    origin: '*', // Allow requests from any domain
+    origin: '*', 
 }));
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Routes
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use('/api/products', productRoutes);
 app.use('/', contactRoutes);
 
-// Admin Login Endpoint
 app.post('/api/admin/login', (req, res) => {
     const { username, password } = req.body;
     if (username === 'as' && password === '123') {
@@ -40,7 +37,7 @@ app.post('/api/admin/login', (req, res) => {
 const connectDB = async () => {
     try {
       await mongoose.connect(process.env.MONGO_URI, {
-        connectTimeoutMS: 300000, // Adjust timeout as needed
+        connectTimeoutMS: 300000, 
       });
       console.log('MongoDB Connected');
     } catch (err) {

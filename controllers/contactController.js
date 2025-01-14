@@ -1,6 +1,5 @@
 import Contact from '../models/contact.js';
 
-// Handle contact form submission
 export const submitContactForm = async (req, res) => {
   try {
     const { name, email, message } = req.body;
