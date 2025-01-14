@@ -14,7 +14,9 @@ const __dirname = path.dirname(__filename);
 dotenv.config();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: '*', // Allow requests from any domain
+}));
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -35,12 +37,18 @@ app.post('/api/admin/login', (req, res) => {
     }
 });
 
-// MongoDB Connection
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    connectTimeoutMS: 100000, 
-}).then(() => console.log('MongoDB Connected')).catch((err) => console.log(err));
+const connectDB = async () => {
+    try {
+      await mongoose.connect(process.env.MONGO_URI, {
+        connectTimeoutMS: 300000, // Adjust timeout as needed
+      });
+      console.log('MongoDB Connected');
+    } catch (err) {
+      console.error('MongoDB connection failed:', err.message);
+    }
+  };
+  
+  connectDB();
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
