@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 dotenv.config();
 
 app.use(cors({
-  origin: 'https://jew-ad-back.onrender.com',
+  origin: `${process.env.REACT_APP_FRONTEND_URL}`,
   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
   allowedHeaders: ['Content-Type', 'Authorization'], 
   credentials: true, 
