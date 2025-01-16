@@ -14,8 +14,13 @@ const __dirname = path.dirname(__filename);
 dotenv.config();
 
 app.use(cors({
-    origin: '*', 
+  origin: 'https://jew-ad-back.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+  allowedHeaders: ['Content-Type', 'Authorization'], 
+  credentials: true, 
 }));
+
+
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
