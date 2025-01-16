@@ -13,8 +13,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config();
 
+const frontendUrl  = process.env.REACT_APP_FRONTEND_URL;
+
+
 app.use(cors({
-  origin: `${process.env.REACT_APP_FRONTEND_URL}`,
+  origin: frontendUrl ,
   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
   allowedHeaders: ['Content-Type', 'Authorization'], 
   credentials: true, 
